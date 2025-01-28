@@ -1,0 +1,417 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    height: 100vh;
+    width: 100%;
+    /* background-image: linear-gradient(rgba(46, 46, 66, 0.7),rgba(48, 48, 61, 0.7)), url(./images/library_background\ image.jpg); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: linear-gradient(rgba(94, 94, 107, 0.7),rgba(75, 75, 88, 0.7)), url(./images/library_background\ image.jpg);
+}
+
+#img1{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.nav-bar{
+    padding: 2% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    align-items: center;
+    margin-left: 30vmin;
+    width: 50vmin;
+}
+
+
+.button{
+    flex: 1;
+    text-align: right;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.button ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+
+.button ul li a{
+    color: #fff;
+    font: 10px;
+    text-decoration: none;
+}
+
+
+.textBox{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    margin-top: 30px;
+}
+
+.textBox h1{
+    font-size: 65px;
+}
+
+.textBox h3{
+    font-size: 20px;
+    font-weight: 50;
+    margin-top: 15px;
+}
+
+.hero-btn{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 12px 40px;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+
+
+
+
+
+/*--------------------------------------------- login page ---------------------------------------------------*/
+
+.login-section{
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(105,105,105); */
+    text-align: center;
+    padding: 40px;
+    background-image: linear-gradient(rgba(136, 136, 143, 0.7),rgba(152, 152, 155, 0.7)), url(./images/Student\ with\ laptop\ sitting\ on\ huge\ books\ in\ library.jpg);
+    background-size: cover;
+    background-position: center;
+    position: static;
+}
+
+.login-section h1{
+    color: #fff;
+}
+
+.login-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vmin;
+    gap: 10%;
+}
+
+.login1{
+    height: 60vmin;
+    width: 60vmin;
+    background-color: #C8A1E0;
+    border-radius: 10px;
+}
+
+.login2{
+    height: 60vmin;
+    width: 60vmin;
+    background-color: #CDC1FF;
+    border-radius: 10px;
+}
+
+.login1 , .login2 , h3{
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form{
+    margin-bottom: 20px;
+    padding-top: 8px;
+}
+
+.login-section h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input[type="text"], .login-form input[type="password"]{
+    width: 80%;
+    height: 35px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input[type="text"], .login-form input[type="password"]:hover{
+    background-color: #f7f7f7;
+}
+
+.login-form button[type="button"]{
+    width: 80%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button[type="button"]:hover{
+    background-color: #3e8e41;
+}
+
+
+
+
+/*-------------------------------------   media query  -----------------------*/
+
+@media only screen and (min-width:768px) and (max-width:991px){
+    .navbar{
+        height: 80vh;
+    }
+
+    .textBox{
+        font-size: 40px;
+    }
+
+    .hero-btn{
+        padding: 10px 30px;
+    }
+
+    .login-section{
+        padding: 20px;
+    }
+
+    .login-page{
+        margin-top: 5vmin;
+    }
+
+    .login1, .login2{
+        height: 40vmin;
+        width: 40vmin;
+    }
+
+    .login-form input[type="text"], .login-form input[type="password"]{
+        width: 70%;
+    }
+
+    .login-form input[type=button]{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .navbar{
+        height: 60vh;
+    }
+
+    .textBox{
+        font-size: 30px;
+    }
+
+    .hero-btn{
+        padding: 8px 20px;
+    }
+
+    .login-section{
+        padding: 10px;
+    }
+
+    .login-page{
+        margin-top: 2vmin;
+    }
+
+    .login1, .login2{
+        height: 30vmin;
+        width: 30vmin;
+    }
+
+    .login-form input[type="text"], .login-form input[type="password"]{
+        width: 60%;
+    }
+
+    .login-form button[type="button"] {
+        width: 60%;
+    }
+}
+
+
+
+/*-----------------------------  Faculty authentication pages  --------------------------------*/
+
+.Faculty_navbar{
+    height: 20vh;
+    width: 100%;
+    background-color: #7E60BF;
+}
+
+.faculty_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(46, 46, 66, 0.7),rgba(48, 48, 61, 0.7)), url(./images/library_background\ image.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.login2 .form h3{
+    text-align: center;
+}
+
+
+/*------------------------------  Admin authentication pages  ----------------------------*/
+.Admin_navbar{
+    height: 15vh;
+    width: 100%;
+    background-color: #7E60BF;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.admin_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(46, 46, 66, 0.7),rgba(48, 48, 61, 0.7)), url(./images/library_background\ image.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.login1 .form h3{
+    text-align: center;
+}
+
+.login11{
+    background-color: #B7B7B7;
+    height: 60vmin;
+    width: 60vmin;
+    border-radius: 10px;
+}
+
+.login11{
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login11 h3{
+    text-align: center;
+}
+
+
+/*-----------------------------------  footer  -------------------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #808D7C;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa{
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 18px 0;
+    color: #f44336;
+}
+
+.icons{
+    font-size: 30px;
+}
+
+
+/* ---------------------------  admin - portal  --------------------------------*/
+
+.admin-login-navbar{
+    background-color: #7E60BF;
+    height: 15vh;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.admin-portal-section{
+    height: 85vh;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-section{
+    display: flex;
+    margin-top: 10px;
+    height: 10vmin;
+    width: 100%;
+    background-color: blue;
+    gap: 30vmin;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-section .search button{
+    margin-top: 15px;
+}
+
+.admin-portal-search-button{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: red;
+    height: 8vmin;
+}
+
+.display-button{
+    background-color: yellowgreen;
+    /* height: 8vmin; */
+    display: flex;
+    gap: 20px;
+    /* align-items: center;
+    justify-content: center; */
+}
