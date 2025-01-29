@@ -144,7 +144,7 @@
                     <p class="text-purple-200 text-xs sm:text-sm">Access administrative dashboard</p>
                 </div>
 
-                <form class="mt-6 sm:mt-8 space-y-4 sm:space-y-6">
+                <form class="mt-6 sm:mt-8 space-y-4 sm:space-y-6" id="adminLoginForm">
                     <div class="space-y-3 sm:space-y-4">
                         <div>
                             <label for="username" class="sr-only">Username</label>
@@ -191,76 +191,7 @@
     </div>
 
     <!-- Updated Script to match index.html -->
-    <script>
-        // Hamburger Menu Toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const menu = document.getElementById('menu');
-        const hamburger = menuBtn.querySelector('.hamburger');
-        const close = menuBtn.querySelector('.close');
-        const navbar = document.getElementById('navbar');
-
-        menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            hamburger.classList.toggle('hidden');
-            close.classList.toggle('hidden');
-            // Add backdrop blur when menu is open
-            if (!menu.classList.contains('hidden')) {
-                navbar.classList.add('bg-purple-900/95');
-            } else if (window.scrollY <= 50) {
-                navbar.classList.remove('bg-purple-900/95');
-            }
-        });
-
-        // Enhanced Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-purple-900/95');
-                navbar.classList.remove('bg-white/10');
-            } else if (menu.classList.contains('hidden')) {
-                navbar.classList.remove('bg-purple-900/95');
-                navbar.classList.add('bg-white/10');
-            }
-        });
-
-        // Add touch event handling for mobile
-        document.addEventListener('touchstart', function () { }, false);
-
-        // Improve scroll handling
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 10) {
-                nav.classList.add('bg-purple-900/95');
-            } else {
-                nav.classList.remove('bg-purple-900/95');
-            }
-        }, { passive: true });
-
-        // Add animation keyframes
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes blob {
-                0% { transform: translate(0px, 0px) scale(1); }
-                33% { transform: translate(30px, -50px) scale(1.1); }
-                66% { transform: translate(-20px, 20px) scale(0.9); }
-                100% { transform: translate(0px, 0px) scale(1); }
-            }
-            .animate-blob {
-                animation: blob 7s infinite;
-            }
-            .animation-delay-2000 {
-                animation-delay: 2s;
-            }
-            /* Add responsive font sizes */
-            @media (max-width: 640px) {
-                html { font-size: 14px; }
-            }
-            /* Improve touch targets on mobile */
-            @media (max-width: 767px) {
-                button, a { min-height: 44px; }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
+    <script src="/js/admin/auth.js"></script>
 </body>
 
 </html>

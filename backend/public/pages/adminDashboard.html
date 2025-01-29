@@ -12,8 +12,12 @@
             font-family: 'Poppins', sans-serif;
         }
     </style>
+
+
 </head>
 <body class="bg-gray-100">
+    
+
     <!-- Add overflow-x-hidden to prevent horizontal scroll on mobile -->
     <div class="flex h-screen overflow-x-hidden">
         <!-- Update sidebar to be fixed on mobile -->
@@ -72,6 +76,10 @@
                                 <span class="text-gray-700 font-medium">Aditya Kumar</span>
                             </div>
                         </div>
+                        <button onclick="logout()" 
+                                class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                            Logout
+                        </button>
                     </div>
                 </div>
             </header>
@@ -219,6 +227,11 @@
     <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 hidden z-30" aria-hidden="true"></div>
 
     <!-- Updated Script with improved mobile handling -->
+
+    <!-- Add this script at the top of body -->
+
+   <script src="/js/admin/dashboardProtection.js"></script>
+
     <script>
         const sidebar = document.getElementById('sidebar');
         const sidebarToggle = document.getElementById('sidebarToggle');
