@@ -1,15 +1,10 @@
-const mysql = require('mysql2');
-const dotenv = require('dotenv');
-dotenv.config();
+var pg = require("pg");
 
+require("dotenv").config();
 
-const connection = mysql.createConnection({
-  host: process.env.host,
-  user: process.env.user,
-  password: process.env.password,
-  database: process.env.database,
-});
+var conString = process.env.pg_conString;
 
+var connection = new pg.Client(conString);
 connection.connect((err) => {
   if (err) {
     console.error("Error connecting to MySQL:", err);
@@ -17,5 +12,8 @@ connection.connect((err) => {
   }
   console.log("Connected to MySQL database");
 });
+
+
+ 
 
 module.exports = connection;

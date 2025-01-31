@@ -18,6 +18,7 @@ const loginUserAdmin = async (req, res) => {
     }
 
     const user = results.rows[0];
+    console.log(user.username, username);
 
     if (user.username === username) {
       const match = await bcrypt.compare(password, user.password);

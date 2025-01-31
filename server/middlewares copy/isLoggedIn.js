@@ -8,7 +8,7 @@ const isLoggedIn = async (req, res, next) => {
 
     if (!token) {
         return res.status(401).json({ error: "Unauthorized" });
-    }  
+    }
 
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
         if (err) {

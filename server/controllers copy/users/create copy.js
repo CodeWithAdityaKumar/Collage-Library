@@ -4,10 +4,8 @@ const connection = require("../../utils/dbConnection");
 
 const query = `INSERT INTO users (name, email, username, password, role) VALUES (?, ?, ?, ?, ?)`;
 
-const CreateAdmin = (req, res) => {
-
-  
-    const { name, email, role, username, password } = req.body;
+const CreateUsers = (req, res) => {
+  const { name, email, role, username, password } = req.body;
 
   bcrypt.genSalt(saltRounds, function (err, salt) {
     bcrypt.hash(password, salt, function (err, hash) {
@@ -30,4 +28,4 @@ const CreateAdmin = (req, res) => {
   });
 };
 
-module.exports = CreateAdmin;
+module.exports = CreateUsers;

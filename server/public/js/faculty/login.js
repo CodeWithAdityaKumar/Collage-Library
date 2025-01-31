@@ -1,5 +1,5 @@
 
-const adminLoginForm = document.getElementById("adminLoginForm");
+const adminLoginForm = document.getElementById("facultyLoginForm");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 
@@ -20,10 +20,7 @@ fetch("/api/isLoggedIn", options)
         window.location.href = "/pages/faculty/dashboard";
       }
     }
-
-
-
-    console.log(response);
+    console.log(response.role);
   })
   .catch((err) => console.error(err));
 
@@ -46,7 +43,7 @@ adminLoginForm.addEventListener("submit", async (e) => {
       body: JSON.stringify(data),
     };
 
-    await fetch("/api/login/admin", options)
+    await fetch("/api/login/faculty", options)
       .then((response) => response.json())
         .then((response) => {
 
@@ -56,12 +53,10 @@ adminLoginForm.addEventListener("submit", async (e) => {
 
             if (response.message === "Login successful") {
                 alert(response.message)
-                window.location.href = "/pages/admin/dashboard"
+                window.location.href = "/pages/faculty/dashboard"
             }
             
-            console.log(response
-
-            )
+            console.log(response)
         })
       .catch((err) => console.error(err));
 

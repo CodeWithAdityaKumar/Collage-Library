@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken");
 const connection = require("../../utils/dbConnection");
 
-const query = `SELECT * FROM users WHERE username = $1 AND role = 'admin'`;
+const query = `SELECT * FROM users WHERE username = $1 AND role = 'faculty'`;
 
-const isAdmin = async (req, res, next) => {
+const isFaculty = async (req, res, next) => {
   let token = req.cookies.accesstoken;
   if (!token) {
     return res.status(401).json({ error: "Unauthorized" });
@@ -33,4 +33,4 @@ const isAdmin = async (req, res, next) => {
   }
 };
 
-module.exports = isAdmin;
+module.exports = isFaculty;
