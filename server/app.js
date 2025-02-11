@@ -225,6 +225,10 @@ app.post(
   (req, res) => {}
 );
 
+app.use((req, res) => {
+  res.status(404).render('notFound');
+});
+
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
